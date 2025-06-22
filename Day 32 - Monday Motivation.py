@@ -7,7 +7,7 @@ with open("quotes.txt", mode="r") as docs1:
     rngQuote = random.choice(quotes)
 
 currentDay = dt.datetime.now().weekday()
-if currentDay == 5:
+if currentDay == 0:
     with smtplib.SMTP("smtp.gmail.com",port=587) as connection:
         connection.starttls()
         connection.login(user=myEmail,password="Password123")
